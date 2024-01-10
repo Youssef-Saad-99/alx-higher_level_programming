@@ -1,3 +1,7 @@
+#include <Python.h>
+#include <object.h>
+#include <listobject.h>
+
 /**
  * print_python_list_info - prints basic info about python lists.
  * @p: a PyObject list.
