@@ -1,4 +1,5 @@
-se_exception():
+#!/usr/bin/python3
+def raise_exception():
     try:
         # Attempt to perform an operation that raises a type exception
         result = "string" + 42
