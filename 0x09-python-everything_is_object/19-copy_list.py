@@ -1,3 +1,3 @@
 def copy_list(l):
-    c = l
+    c = [i for i in l]
     return c
