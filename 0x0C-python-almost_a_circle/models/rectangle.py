@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+'''Module for Rectangle class'''
+from models.base import Base
+
+
+class Rectangle(Base):
+    '''A Rectangle class'''
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    @property
+    def width(self):
+        '''width of this rectangle'''
+        return self.__width
+
+    @width.setter
+    def width(self, new_value):
+        self.__width = new_value
+
+    @property
+    def height(self):
+        '''height of this rectangle'''
+        return self.__height
+
+    @height.setter
+    def height(self, new_value):
+        self.__height = new_value
+
+    @property
+    def x(self):
+        '''x of this rectangle'''
+        return self.__x
+
+    @x.setter
+    def x(self, new_value):
+        self.__x = new_value
+
+    @property
+    def y(self):
+        '''y of this rectangle'''
+        return self.__y
+
+    @y.setter
+    def y(self, new_value):
+        self.__y = new_value
