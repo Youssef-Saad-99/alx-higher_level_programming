@@ -83,3 +83,29 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print("\n", end="")
+
+    def __str__(self):
+        '''returns string info about this rectangle'''
+        return "[Rectangle] ({}) {}/{} - {}/{}".\
+            format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        '''Internal method that updates instance attributes via */**args.'''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.__width = width
+        if height is not None:
+            self.__height = height
+        if x is not None:
+            self.__x = x
+        if y is not None:
+            self.__y = y
+
+    def update(self, *args, **kwargs):
+        '''Updates instance attributes via no-keyword & keyword args.'''
+        # print(args, kwargs)
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
